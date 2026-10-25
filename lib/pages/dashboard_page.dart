@@ -1,7 +1,7 @@
-import 'package:budget_monthlay_app_clone/jason/activity_jason.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
+import '../activity_json/activity_json.dart';
 import '../theme/colors.dart';
 import 'balance_page.dart';
 
@@ -32,11 +32,11 @@ class _DashBoardState extends State<DashBoard> {
               children: [appBarCurve(), appBarBalance()],
             ),
           ),
-          SizedBox(height: 35,),
+          const SizedBox(height: 35,),
           getActivity(),
-          SizedBox(height: 35,),
+          const SizedBox(height: 35,),
           getverification(),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
          getNewsPromo(),
@@ -73,13 +73,13 @@ class _DashBoardState extends State<DashBoard> {
               children: [
                 GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>BalancePage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const BalancePage()));
                   },
                   child: Column(
 
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             "\$",
@@ -91,7 +91,7 @@ class _DashBoardState extends State<DashBoard> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
                       Text(
@@ -106,7 +106,7 @@ class _DashBoardState extends State<DashBoard> {
                     Container(
                       width: 45,
                       height: 45,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: NetworkImage(
                                   'https://images.statusfacebook.com/profile_pictures/cute_cats/cute_cats_profile_pictures_13.jpg'))),
@@ -167,11 +167,11 @@ class _DashBoardState extends State<DashBoard> {
                            Container(
                                height: 10,
                                width: 10,
-                               decoration: BoxDecoration(
+                               decoration: const BoxDecoration(
                                  color: Colors.red,
                                  shape: BoxShape.circle,
                                )),
-                           SizedBox(
+                           const SizedBox(
                              width: 15,
                            ),
                            Column(
@@ -183,10 +183,10 @@ class _DashBoardState extends State<DashBoard> {
                                      fontSize: 14,
                                      color: Colors.black.withOpacity(0.5)),
                                ),
-                               SizedBox(
+                               const SizedBox(
                                  height: 3,
                                ),
-                               Text(
+                               const Text(
                                  '\$1460',
                                  style: TextStyle(
                                      fontSize: 22,
@@ -207,7 +207,7 @@ class _DashBoardState extends State<DashBoard> {
                                  color: primary,
                                  shape: BoxShape.circle,
                                )),
-                           SizedBox(
+                           const SizedBox(
                              width: 15,
                            ),
                            Column(
@@ -219,10 +219,10 @@ class _DashBoardState extends State<DashBoard> {
                                      fontSize: 14,
                                      color: Colors.black.withOpacity(0.5)),
                                ),
-                               SizedBox(
+                               const SizedBox(
                                  height: 3,
                                ),
-                               Text(
+                               const Text(
                                  '\$3,850',
                                  style: TextStyle(
                                      fontSize: 22,
@@ -235,10 +235,10 @@ class _DashBoardState extends State<DashBoard> {
                      )
                    ],
                  ),
-                 SizedBox(height: 15,), Divider(),
-                  SizedBox(height: 5,),
-Text('You Spent \$1230 on during out this month . let\'s try to make it lower',style: TextStyle(fontSize: 14,height: 1.6), ),
-                  SizedBox(height: 15,),
+                 const SizedBox(height: 15,), const Divider(),
+                  const SizedBox(height: 5,),
+const Text('You Spent \$1230 on during out this month . let\'s try to make it lower',style: TextStyle(fontSize: 14,height: 1.6), ),
+                  const SizedBox(height: 15,),
                   Text('Tell me more',style: TextStyle(fontSize: 15,color: primary,fontWeight: FontWeight.w600),)
                 ],
               ),
@@ -254,8 +254,8 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Activity',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 17),),
-        SizedBox(height: 15,),
+        const Text('Activity',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 17),),
+        const SizedBox(height: 15,),
         Wrap(
           spacing: 25,
           children:
@@ -294,7 +294,7 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
                       ),
 
                     ),
-                    SizedBox(height: 12,),
+                    const SizedBox(height: 12,),
                     Text(items[index]['title'],style: TextStyle(fontSize: 13,color: Colors.black.withOpacity(0.5)),)
                   ],
                 ),
@@ -315,8 +315,8 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('Complete Verification',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w600),),
-          SizedBox(height: 15,),
+          const Text('Complete Verification',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w600),),
+          const SizedBox(height: 15,),
           Container(
             width:double.infinity ,
             decoration: BoxDecoration(
@@ -340,13 +340,13 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('60% ',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),)
+                      const Text('60% ',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),)
                       ,Text('3 of 10 completed',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: Colors.black.withOpacity(0.5)),)
 
 
                     ],
                   ),
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
                   Stack(
                     children: [
                       Container(
@@ -366,51 +366,51 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
                       ),
                     ],
                   ),
-                  SizedBox(height: 15,),
-                  Divider(),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 15,),
+                  const Divider(),
+                  const SizedBox(height: 10,),
                   Row(
                     children: [
                       Icon(Icons.person,size: 30,color: primary,),
-                      SizedBox(width: 20,),
+                      const SizedBox(width: 20,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('personal Imformation',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600,color: Colors.black),),
-                          SizedBox(height: 8,),
+                          const Text('personal Imformation',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600,color: Colors.black),),
+                          const SizedBox(height: 8,),
                           Text('When you register for an account .',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600, color: Colors.black.withOpacity(0.5),
                           ),),
-                          SizedBox(height: 8,),
+                          const SizedBox(height: 8,),
                           Text('We collect personal imformation',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600, color: Colors.black.withOpacity(0.5),),),
-                          SizedBox(height: 12,),
+                          const SizedBox(height: 12,),
                           Text('Continue',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: primary),),
 
                         ],
                       )
                     ],
                   ),
-                  SizedBox(height: 10,),
-                  Divider(),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
+                  const Divider(),
+                  const SizedBox(height: 10,),
                   Row(
 
 
                     children: [
                       Icon(Icons.perm_contact_cal_outlined,color: primary,size: 30,),
-                      SizedBox(width: 20,),
-                      Text('Verification',style: TextStyle(fontSize: 15,color: Colors.black),)
+                      const SizedBox(width: 20,),
+                      const Text('Verification',style: TextStyle(fontSize: 15,color: Colors.black),)
                     ],
                   ),
-                  SizedBox(height: 10,),
-                  Divider(),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
+                  const Divider(),
+                  const SizedBox(height: 10,),
                   Row(
 
 
                     children: [
                       Icon(Icons.email,color: primary,size: 30),
-                      SizedBox(width: 20,),
-                      Text('Confirm Email',style: TextStyle(fontSize: 15,color: Colors.black),)
+                      const SizedBox(width: 20,),
+                      const Text('Confirm Email',style: TextStyle(fontSize: 15,color: Colors.black),)
                     ],
                   )
 
@@ -432,8 +432,8 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('News and Promo',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w600),),
-          SizedBox(height: 15,),
+          const Text('News and Promo',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w600),),
+          const SizedBox(height: 15,),
           Container(
             width: size.width,
             decoration: BoxDecoration(
@@ -454,7 +454,7 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
                 Container(
                   width: double.infinity,
                   height: 130,
-                  decoration: BoxDecoration(image:DecorationImage(
+                  decoration: const BoxDecoration(image:DecorationImage(
                     image: AssetImage('assets/image/img_1.png'),fit: BoxFit.cover
                   ),
                   borderRadius: BorderRadius.only(
@@ -467,10 +467,10 @@ Text('You Spent \$1230 on during out this month . let\'s try to make it lower',s
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Share and Invite Your friends',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),),
-                      SizedBox(height: 5,),
-                      Text('Invite friends to register on our app . for every user you invite ,you will earn up to \$10.,',style: TextStyle(fontSize: 14,height: 1.6),),
-                      SizedBox(height: 12,),
+                      const Text('Share and Invite Your friends',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),),
+                      const SizedBox(height: 5,),
+                      const Text('Invite friends to register on our app . for every user you invite ,you will earn up to \$10.,',style: TextStyle(fontSize: 14,height: 1.6),),
+                      const SizedBox(height: 12,),
                       Text('Invite Now' ,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600,color: primary),)
                     ],
                   ),
