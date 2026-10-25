@@ -1,6 +1,3 @@
-
- import 'package:flutter/material.dart';
-
 List  items = [
   {
     "title" : "Transfer",

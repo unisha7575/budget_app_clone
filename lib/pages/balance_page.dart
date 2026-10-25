@@ -4,7 +4,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/categarey.dart';
-import '../theme/chartLine.dart';
+import '../theme/chart_line.dart';
 import '../theme/marchant_list.dart';
 
 class BalancePage extends StatefulWidget {
